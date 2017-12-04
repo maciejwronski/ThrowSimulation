@@ -16,5 +16,6 @@ void rzutUkosny::drawTrack() {
 	for (float t = 0; t < totalTime; t += step) {
 		tempX = velocity[0] * t;
 		tempY = velocity[1] * t - (acceleration / 2)*t*t;
+		printf("COORDS: [%f][%f]\n", tempX, tempY);
 	}
 }
