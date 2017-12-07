@@ -2,18 +2,36 @@
 #include <iostream>
 #include "variables.h"
 #include "ukosny.h"
+#include "allegro.h"
+#include "cartesian.h"
 using namespace std;
 
 void submitValues();
 void calculateNewQuantities();
 void printMaxValues();
-int main() {
+
+int main(){
 	submitValues();
 	calculateNewQuantities();
 	printMaxValues();
+
+
 	rzutUkosny rzut(velocity[0], velocity[1], totalTime, gravitationalAcceleration, Step);
 	rzut.drawTrack();
-	system("PAUSE");
+	Allegro allegro;
+	Cartesian cartesian(hMax, range);
+
+
+	while (exitSimulation == false) {
+		ALLEGRO_EVENT ev;
+		al_wait_for_event(event_queue, &ev);
+		if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+			if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE)
+				exitSimulation = true;
+		cartesian.drawCoordinateSystem();
+	}
+
+
 	return 0;
 }
 

@@ -1,4 +1,7 @@
 #pragma once
+
+bool exitSimulation;
+
 float throwAngle; 
 float Speed; 
 float gravitationalAcceleration;

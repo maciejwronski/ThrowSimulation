@@ -73,6 +73,18 @@
     <Allegro_AddonPrimitives>true</Allegro_AddonPrimitives>
     <Allegro_AddonPhysfs>true</Allegro_AddonPhysfs>
     <Allegro_AddonColor>true</Allegro_AddonColor>
+    <Allegro_AddonFont>true</Allegro_AddonFont>
+    <Allegro_AddonImage>true</Allegro_AddonImage>
+    <Allegro_AddonAudio>true</Allegro_AddonAudio>
+    <Allegro_AddonAcodec>true</Allegro_AddonAcodec>
+    <Allegro_AddonDialog>true</Allegro_AddonDialog>
+    <Allegro_AddonMemfile>true</Allegro_AddonMemfile>
+    <Allegro_AddonVideo>true</Allegro_AddonVideo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Allegro_AddonTTF>true</Allegro_AddonTTF>
+    <Allegro_AddonPrimitives>true</Allegro_AddonPrimitives>
+    <Allegro_AddonFont>true</Allegro_AddonFont>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -118,10 +130,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="allegro.cpp" />
+    <ClCompile Include="Cartesian.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="ukosny.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="allegro.h" />
+    <ClInclude Include="cartesian.h" />
     <ClInclude Include="ukosny.h" />
     <ClInclude Include="variables.h" />
   </ItemGroup>
