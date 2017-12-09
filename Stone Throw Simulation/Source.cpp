@@ -1,9 +1,10 @@
 #pragma once
 #include <iostream>
 #include "variables.h"
-#include "ukosny.h"
+#include "rzut.h"
 #include "allegro.h"
 #include "cartesian.h"
+
 using namespace std;
 
 void submitValues();
@@ -15,12 +16,9 @@ int main(){
 	calculateNewQuantities();
 	printMaxValues();
 
-
 	rzutUkosny rzut(velocity[0], velocity[1], totalTime, gravitationalAcceleration, Step);
-	rzut.drawTrack();
 	Allegro allegro;
 	Cartesian cartesian(hMax, range);
-
 
 	while (exitSimulation == false) {
 		ALLEGRO_EVENT ev;
@@ -28,10 +26,9 @@ int main(){
 		if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
 			if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE)
 				exitSimulation = true;
-		cartesian.drawCoordinateSystem();
+		cartesian.drawThrowTrack(rzut.GetMyVector());
 	}
-
-
+	system("PAUSE");
 	return 0;
 }
 

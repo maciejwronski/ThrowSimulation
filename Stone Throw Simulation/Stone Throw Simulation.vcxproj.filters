@@ -21,13 +21,13 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ukosny.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="allegro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Cartesian.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rzut.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,13 +35,13 @@
     <ClInclude Include="variables.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ukosny.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="allegro.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cartesian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rzut.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

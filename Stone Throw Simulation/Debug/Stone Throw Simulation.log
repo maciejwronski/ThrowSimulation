@@ -1,6 +1,4 @@
-﻿  Skipping... (no relevant changes detected)
-  allegro.cpp
-  Source.cpp
-  Cartesian.cpp
+﻿  Cartesian.cpp
+c:\users\maciej\documents\visual studio 2015\projects\stone throw simulation\stone throw simulation\cartesian.cpp(46): warning C4018: '<': signed/unsigned mismatch
   Stone Throw Simulation.vcxproj -> C:\Users\Maciej\documents\visual studio 2015\Projects\Stone Throw Simulation\Debug\Stone Throw Simulation.exe
   Stone Throw Simulation.vcxproj -> C:\Users\Maciej\documents\visual studio 2015\Projects\Stone Throw Simulation\Debug\Stone Throw Simulation.pdb (Partial PDB)
