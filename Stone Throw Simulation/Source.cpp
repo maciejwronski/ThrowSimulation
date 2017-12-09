@@ -34,12 +34,12 @@ int main(){
 
 void printMaxValues() {
 	cout << "------------------------------" << endl;
-	cout << "X-Velocity: " << velocity[0] << endl;
-	cout << "Y-Velocity: " << velocity[1] << endl;
-	cout << "Rise Time: " << riseTime << endl;
-	cout << "Total time: " << totalTime << endl;
-	cout << "Max Height: " << hMax << endl;
-	cout << "Throw Range: " << range << endl;
+	cout << "X-Velocity: " << velocity[0] << " [m]"<< endl;
+	cout << "Y-Velocity: " << velocity[1] << " [m]"<<endl;
+	cout << "Rise Time: " << riseTime << " [s]" <<endl;
+	cout << "Total time: " << totalTime << " [s]" <<endl;
+	cout << "Max Height: " << hMax << " [m]" << endl;
+	cout << "Throw Range: " << range << " [m]" << endl;
 	cout << "------------------------------" << endl;
 }
 
@@ -54,12 +54,12 @@ void calculateNewQuantities() {
 }
 
 void submitValues() {
-	cout << "Enter Throw Angle" << endl;
+	cout << "Enter Throw Angle [in Degree]" << endl;
 	cin >> throwAngle;
-	cout << "Enter Intitial Speed" << endl;
+	cout << "Enter Intitial Speed [in metr/second]" << endl;
 	cin >> Speed;
-	cout << "Enter Gravitational Acceleration" << endl;
+	cout << "Enter Gravitational Acceleration [in metr/second^2]" << endl;
 	cin >> gravitationalAcceleration;
-	cout << "Enter step" << endl;
+	cout << "Enter step [As the value is lower, it shows more results, for example 0.01. It's related with maximum time.]" << endl;
 	cin >> Step;
 }
