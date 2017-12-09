@@ -3,7 +3,7 @@
 Cartesian::Cartesian(float Height, float Range) {
 	maxHeight = Height;
 	maxRange = Range;
-
+	calculateScale();
 	font = al_load_font("fonts/times.ttf", 18, 0);
 }
 Cartesian::~Cartesian() {
@@ -15,12 +15,12 @@ void Cartesian::drawCoordinateSystem(){
 	drawVerticalLine();
 	drawHeightMarks();
 	drawRangeMarks();
-	calculateScale();
 	al_flip_display();
 }
 void Cartesian::calculateScale() {
-	scale[0] = (horizontalLineEnd[0] - horizontalLineStart[0]) / maxRange;
+	maxRange != 0 ? scale[0] = (horizontalLineEnd[0] - horizontalLineStart[0]) / maxRange : scale[0] = 1;
 	scale[1] = (VerticalLineEnd[1] - VerticalLineStart[1]) / maxHeight;
+	printf("%f %f\n", scale[0], scale[1]);
 }
 void Cartesian::drawHorizontalLine() {
 	al_draw_line(horizontalLineStart[0], horizontalLineStart[1], horizontalLineEnd[0], horizontalLineEnd[1], al_map_rgb(255, 255, 255), 5);

@@ -13,8 +13,10 @@ static const float VerticalLineEnd[2] = { 100, 50 };
 
 class Cartesian {
 	ALLEGRO_FONT* font = NULL;
+	bool horizontalThrow;
 	float maxHeight;
 	float maxRange;
+	float intitialHeight;
 	float scale[2];
 	void drawHorizontalLine();
 	void drawVerticalLine();

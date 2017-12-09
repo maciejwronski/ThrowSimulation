@@ -27,7 +27,7 @@
     <ClCompile Include="Cartesian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="rzut.cpp">
+    <ClCompile Include="ThrowObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClInclude Include="cartesian.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rzut.h">
+    <ClInclude Include="ThrowObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
