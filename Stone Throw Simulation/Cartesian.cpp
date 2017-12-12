@@ -15,7 +15,6 @@ void Cartesian::drawCoordinateSystem(){
 	drawVerticalLine();
 	drawHeightMarks();
 	drawRangeMarks();
-	al_flip_display();
 }
 void Cartesian::calculateScale() {
 	maxRange != 0 ? scale[0] = (horizontalLineEnd[0] - horizontalLineStart[0]) / maxRange : scale[0] = 1;
@@ -43,11 +42,19 @@ void Cartesian::drawRangeMarks() {
 }
 
 void Cartesian::drawPoints(std::vector <std::pair<double, double> > &coords){
-	for (int i = 0; i < coords.size(); i++) {
-		al_draw_circle(horizontalLineStart[0]+coords[i].first*scale[0], horizontalLineStart[1]+coords[i].second*scale[1], 3, al_map_rgb(255, 0, 0), 2);
+	al_draw_circle(horizontalLineStart[0] + coords[0].first*scale[0], horizontalLineStart[1] + coords[0].second*scale[1], 3, al_map_rgb(0, 255, 0), 5);
+	for (int i = 1; i < coords.size(); i++) {
+		al_draw_circle(horizontalLineStart[0]+coords[i].first*scale[0], horizontalLineStart[1]+coords[i].second*scale[1], 3, al_map_rgb(0, 0, 255), 2);
+		al_rest(drawDelay);
+		al_flip_display();
 	}
+	al_draw_circle(horizontalLineStart[0] + coords[coords.size()-1].first*scale[0], horizontalLineStart[1] + coords[coords.size()-1].second*scale[1], 3, al_map_rgb(255, 0, 0), 5);
+	al_flip_display();
+	everythingHasBeenDrawn = true;
 }
 void Cartesian::drawThrowTrack(std::vector <std::pair<double, double> > &coords) {
-	drawCoordinateSystem();
-	drawPoints(coords);
+	while (!everythingHasBeenDrawn) {
+		drawCoordinateSystem();
+		drawPoints(coords);
+	}
 }

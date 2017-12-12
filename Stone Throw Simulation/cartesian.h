@@ -9,11 +9,12 @@ static const float horizontalLineStart[2] = { 100,500 };
 static const float horizontalLineEnd[2] = { 1000,500 };
 static const float VerticalLineStart[2] = { 100,500 };
 static const float VerticalLineEnd[2] = { 100, 50 };
-
+static const float drawDelay = 0.01;
 
 class Cartesian {
 	ALLEGRO_FONT* font = NULL;
 	bool horizontalThrow;
+	bool everythingHasBeenDrawn;
 	float maxHeight;
 	float maxRange;
 	float intitialHeight;

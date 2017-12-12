@@ -55,7 +55,7 @@ void calculateNewQuantities() {
 
 void submitValues() {
 	while (whichOption < 1 || whichOption > 3) {
-		cout << "[Which Throw: 1 - Horizontal / 2 - Vertical / 3 - Oblique] Throw" << endl;
+		cout << "[Which Throw: 1 - Horizontal / 2 - Vertical / 3 - Projectile] Throw" << endl;
 		cin >> whichOption;
 	}
 	if (whichOption == 1) {

@@ -14,26 +14,30 @@ ThrowObject::~ThrowObject(){}
 
 void ThrowObject::calculateCoords(int whichThrow) {
 	float tempX, tempY;
+	float t = 0;
 	if (whichThrow == 1) {
-		for (float t = 0; t < totalTime; t += step) {
+		while(t < totalTime){
 			tempX = velocity[0] * t;
 			tempY = startHeight - acceleration*t*t / 2;
+			t += step;
 			coords.push_back(make_pair(tempX, tempY));
 			printf("[%f][%f]\n", tempX, tempY);
 		}
 	}
 	else if (whichThrow == 2) {
-		for (float t = 0; t < totalTime; t += step) {
+		while (t < totalTime) {
 			tempX = 20;
 			tempY = velocity[1] * t - acceleration*t*t / 2;
+			t += step;
 			coords.push_back(make_pair(tempX, tempY));
 			printf("[%f][%f]\n", tempX, tempY);
 		}
 	}
 	else if (whichThrow == 3) {
-		for (float t = 0; t < totalTime; t += step) {
+		while (t < totalTime) {
 			tempX = velocity[0] * t;
 			tempY = velocity[1] * t - (acceleration / 2)*t*t;
+			t += step;
 			coords.push_back(make_pair(tempX, tempY));
 			printf("[%f][%f]\n", tempX, tempY);
 		}
